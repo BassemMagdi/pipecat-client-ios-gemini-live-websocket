@@ -50,7 +50,7 @@ class GeminiLiveWebSocketConnection: NSObject, URLSessionWebSocketDelegate {
         socket.resume()
         
         // Send initial setup message
-        let model = "models/gemini-2.0-flash-exp" // TODO: make this configurable someday
+        let model = "models/gemini-2.5-flash-preview-native-audio-dialog" // TODO: make this configurable someday
         try await sendMessage(
             message: WebSocketMessages.Outbound.Setup(
                 model: model,
