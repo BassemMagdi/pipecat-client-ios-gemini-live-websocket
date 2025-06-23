@@ -41,7 +41,7 @@ class GeminiLiveWebSocketConnection: NSObject, URLSessionWebSocketDelegate {
             delegateQueue: OperationQueue()
         )
         let host = "preprod-generativelanguage.googleapis.com"
-        let url = URL(string: "wss://\(host)/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=\(options.apiKey)")
+        let url = URL(string: "wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent?key=\(options.apiKey)")
         let socket = urlSession.webSocketTask(with: url!)
         self.socket = socket
         
