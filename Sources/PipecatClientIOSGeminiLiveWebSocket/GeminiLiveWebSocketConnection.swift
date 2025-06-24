@@ -41,7 +41,7 @@ class GeminiLiveWebSocketConnection: NSObject, URLSessionWebSocketDelegate {
             delegateQueue: OperationQueue()
         )
         let host = "preprod-generativelanguage.googleapis.com"
-        let url = URL(string: "ws://192.168.1.8:8081")
+        let url = URL(string: "wss://livewire-backend-qb3avtwl7q-zf.a.run.app")
         let socket = urlSession.webSocketTask(with: url!)
         self.socket = socket
         
